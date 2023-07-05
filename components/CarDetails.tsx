@@ -34,7 +34,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                             <Transition.Child
                                 as={Fragment}
                                 enter="ease-out duration-300"
-                                enterFrom="opacity-0 scale-95"
+                                enterFrom="opacity-0 s  cale-95"
                                 enterTo="opacity-100 scale-100"
                                 leave="ease-out duration-300"
                                 leaveFrom="opacity-100 scale-100"
@@ -50,4 +50,4 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
     )
 }
 
-export default CarDetails
+export default CarDetails;
