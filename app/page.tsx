@@ -1,4 +1,4 @@
-import { CarCard, CustomFilter, Hero, SearchBar } from "@/components"
+import { CarCard, CustomFilter, Hero, SearchBar, ShowMore } from "@/components"
 import { fetchCars } from "@/utils"
 import { fuels, yearsOfProduction } from "@/constants";
 
@@ -44,6 +44,11 @@ export default async function Home({ searchParams }) {
                   <CarCard car={car} />
                 ))}
               </div>
+
+              <ShowMore
+                pageNumber={(searchParams.pageNumber || 9) / 10}
+                isNext={(searchParams.limit || 9) > allCars.length}
+              />
             </section>
           ) : (
             <div className="home__error-container">
@@ -51,7 +56,6 @@ export default async function Home({ searchParams }) {
                 Oops, no result found
               </h2>
               <p>{allCars?.message}</p>
-
             </div>
           )
         }
