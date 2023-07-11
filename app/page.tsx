@@ -46,8 +46,8 @@ export default async function Home({ searchParams }) {
               </div>
 
               <ShowMore
-                pageNumber={(searchParams.pageNumber || 9) / 10}
-                isNext={(searchParams.limit || 9) > allCars.length}
+                pageNumber={(searchParams.limit || 10) / 10}
+                isNext={(searchParams.limit || 10) > allCars.length}
               />
             </section>
           ) : (
